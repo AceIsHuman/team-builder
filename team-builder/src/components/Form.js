@@ -1,23 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 //name
 //email
 //role
 
 function Form() {
+    const [formData, setFormData] = useState({ name: '', email: '', role: '' })
+
     return (
         <form>
             <label for="name">Name</label>
-            <input type="text" name="name" />
+            <input type="text" name="name" value={formData.name}/>
 
             <label for="email">Email</label>
-            <input type="text" name="email" />
+            <input type="text" name="email" value={formData.email}/>
 
-            <select name="role">
-                <option>Backend Engineer</option>
-                <option>Frontend Developer</option>
-                <option>UX Designer</option>
-            </select>
+            <label for="role">Role</label>
+            <input type="text" name="role" value={formData.role} />
         </form>
     )
 }
