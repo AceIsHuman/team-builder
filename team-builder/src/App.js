@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="App">
-      <Form />
+      <Form setTeamMembers={setTeamMembers} />
       <ul>
         {teamMembers.map(member => <li>member.name</li>)}
       </ul>
