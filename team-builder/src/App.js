@@ -8,10 +8,14 @@ function App() {
 
   return (
     <div className="App">
-      <Form setTeamMembers={setTeamMembers} />
-      <ul>
-        {teamMembers.map(member => <li>member.name</li>)}
-      </ul>
+      <Form teamMembers={teamMembers} setTeamMembers={setTeamMembers} />
+        {teamMembers.map(member => (
+        <div>
+          <h2>Name: {member.name}</h2>
+          <h3>Email: {member.email}</h3>
+          <h3>Role: {member.role}</h3>
+        </div>)
+        )}
     </div>
   );
 }
