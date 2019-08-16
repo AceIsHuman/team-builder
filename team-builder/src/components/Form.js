@@ -9,7 +9,7 @@ function Form(props) {
 
     const handleSubmit = event => {
         event.preventDefault();
-        props.setTeamMembers([{...props.teamMembers}, formData]);
+        props.setTeamMembers([...props.teamMembers, formData]);
         console.log('working on it');
     }
 
